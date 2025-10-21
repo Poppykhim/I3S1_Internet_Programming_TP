@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bouncing Game</title>
+    <style>
+      body {
+        margin: 0;
+        background: #050505;
+        color: #eee;
+        font: 16px system-ui;
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+      canvas {
+        background: #444430;
+        border: 2px solid #555;
+      }
+      #ui {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+      }
+      button {
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ui">
+      Score: <span id="score">0</span> <button id="restart">Restart</button
+      ><br />
+      High Score: <span id="highScore">0</span>
+    </div>
+    <canvas id="game" width="480" height="320"></canvas>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
