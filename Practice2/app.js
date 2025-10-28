@@ -127,10 +127,7 @@ output.textContent = "Ready to practice DOM!";
 const state = { students: [] }; // { name: string, score: number }
 
 function computeAverage(arr) {
-  // return 0 if empty, else average of arr[i].score
   if (arr.length == 0) return 0;
-  //   const total = arr.reduce((sum, student) => sum + student.score, 0);
-  //   return (total / arr.length).toFixed(2);
   let total = 0;
   for (let student of arr) {
     total += student.score;
