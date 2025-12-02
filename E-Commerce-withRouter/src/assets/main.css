@@ -1,10 +1,26 @@
 @import './base.css';
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+
+  overflow: auto; /* allow scrolling */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+  display: none;
+}
 
 #app {
   max-width: 1920px;
   margin: 0;
   padding: 0;
-  font-weight: normal;
 }
 
 a,

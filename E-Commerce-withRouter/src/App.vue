@@ -1,4 +1,5 @@
 <script>
+import HeaderComponent from './components/HeaderComponent.vue'
 import CategoryComponent from './components/CategoryComponent.vue'
 import TrioComponent from './components/TrioComponent.vue'
 import CardComponent from './components/CardComponent.vue'
@@ -53,6 +54,7 @@ export default {
     TrioComponent,
     CardComponent,
     MenuComponent,
+    HeaderComponent,
   },
   methods: {
     /**
@@ -75,6 +77,7 @@ export default {
 
 <template>
   <div class="body">
+    <div class="Page-Header"><HeaderComponent /></div>
     <div class="Part1">
       <div class="header">
         <h1>Feature Categories</h1>
