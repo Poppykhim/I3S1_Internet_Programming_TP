@@ -5,21 +5,21 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', redirect: '/PageOne' },
-
     {
-      path: '/PageOne',
+      path: '/:page',
       component: PageTemplate,
-      props: { title: 'Welcome to Page 1' },
+      props: (route) => ({
+        page: route.params.page,
+        sectionId: null,
+      }),
     },
     {
-      path: '/PageTwo',
+      path: '/:page/section/:sectionId',
       component: PageTemplate,
-      props: { title: 'Welcome to Page 2' },
-    },
-    {
-      path: '/PageThree',
-      component: PageTemplate,
-      props: { title: 'Welcome to Page 3' },
+      props: (route) => ({
+        page: route.params.page,
+        sectionId: Number(route.params.sectionId),
+      }),
     },
   ],
 })
